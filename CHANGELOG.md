@@ -17,7 +17,9 @@ This project adheres to [Semantic Versioning](http://semver.org/)
 - changed content for screen readers
 - Changelog and README files;
 - example screenshot and social cover for repository images.
+- bumped version
 
 ## [2020-12-07] - 0.1.0
 
 - Initial public version.
+
