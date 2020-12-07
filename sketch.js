@@ -55,11 +55,6 @@ function draw()
         console.log(x);
         y = constrain(Math.floor(Math.random() * screenHeight), 10, screenHeight * 0.9);
         console.log(y);
-        //translate(x, y);
-        //rotate(2.95);
-        //rect(x/2, y, 300, 300);
-        //translate(j, j);
-        //rect(100, 100, 200, 200);
         if(elements.triangles > 0) {
         console.log('triangles=' + elements.triangles);
             fill(Math.random() * 255, Math.random() * 255, Math.random() * 255, Math.random() * 255);
@@ -93,14 +88,14 @@ function draw()
 }
 
 function generateTriangle(x, y) {
-    let ax = x;
-    let ay = y;
-    let bx = Math.floor(Math.random() * screenWidth);
-    let by = Math.floor(Math.random() * screenHeight);
+    let ax = constrain(x, 20, screenWidth * 0.8 - 20);
+    let ay = constrain(y, 20, screenHeight * 0.8 - 20);
+    let bx = constrain(Math.floor(Math.random() * screenWidth), 20, screenWidth * 0.8 - 20);
+    let by = constrain(Math.floor(Math.random() * screenHeight),20, screenHeight * 0.8 - 20);
     console.log(bx);
     console.log(by);
-    let cx = Math.floor(Math.random() * screenWidth);
-    let cy = Math.floor(Math.random() * screenHeight);
+    let cx = constrain(Math.floor(Math.random() * screenWidth), 20, screenWidth * 0.8 - 20);
+    let cy = constrain(Math.floor(Math.random() * screenHeight),20, screenHeight * 0.8 - 20);
     console.log(cx);
     console.log(cy);
     triangle(ax/2, ay/2, bx/2, by/2, cx/2, cy/2);
