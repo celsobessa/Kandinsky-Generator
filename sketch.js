@@ -15,6 +15,13 @@ console.log(n);
 var j = screenWidth/ 2;
 var x, y;
 
+function randomNumber(max = 1, min = 0) {
+  if(min >= max) {
+    return max;
+  }
+
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
 function setup()
 {
